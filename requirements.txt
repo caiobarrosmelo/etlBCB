@@ -1,5 +1,5 @@
-pandas
 requests
+pandas
 pymysql
-slqalchemy
+sqlalchemy
 black

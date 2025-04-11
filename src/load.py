@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+from sqlalchemy import create_engine
 
 
 def salvarCsv(df: pd.DataFrame, nome_arquivo: str, separador: str, decimal: str):
@@ -16,17 +17,14 @@ def salvarCsv(df: pd.DataFrame, nome_arquivo: str, separador: str, decimal: str)
     return
 
 
-def salvarSqlite(df: pd.DataFrame, nome_banco: str, nome_tabela: str):
+def salvarSQLite(df: pd.DataFrame, nome_banco: str, nome_tabela: str):
     conn = sqlite3.connect(nome_banco)
     df.to_sql(nome_tabela, conn, if_exists="replace", index=False)
     conn.close()
     return
 
 
-from sqlalchemy import create_engine
-
-
-def salvarMySql(
+def salvarMySQL(
     df: pd.DataFrame,
     usuario: str,
     senha: str,

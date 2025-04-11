@@ -1,4 +1,4 @@
-# ETL de Banco Central do Brasil
+# ETL do Banco Central do Brasil
 
 ## Meios de Pagamentos Trimestrais
 
