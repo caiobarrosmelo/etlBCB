@@ -33,3 +33,33 @@
 | `quantidadeConvenios` | `decimal` | Quantidade Convênio | Quantidade (em milhares) de transações realizadas referentes a arrecadações trimestrais governamentais (arrecadação de tributos e encargos sociais em virtude de convênios firmados entre a instituição e as entidades governamentais) e não-governamentais (arrecadações referentes aos convênios firmados entre a instituição e entidades privadas). |
 | `quantidadeDebitoDireto` | `decimal` | Quantidade Débito Direto | Quantidade (em milhares) de transações trimestrais referente a débitos previamente autorizados pelo cliente em sua conta corrente/pagamento, referente ao pagamento de contas recorrentes e a débitos que a instituição efetua na conta dos clientes em virtude de cobrança de tarifas pelos serviços prestados. |
 | `quantidadeSaques` | `decimal` | Quantidade de Saque | Quantidade (em milhares) de saques realizados nos caixas eletrônicos trimestralmente. |
+
+#### Análise Exploratória de Dados (EDA)
+Esta etapa do projeto consistiu na análise estatística descritiva dos dados trimestrais de meios de pagamento disponibilizados pelo Banco Central do Brasil, com foco na identificação de padrões, tendências e possíveis inconsistências.
+
+Etapas realizadas:
+Conexão com o banco de dados etlbcb.db via sqlite3.
+
+Leitura da tabela meios_pagamentos_tri utilizando pandas.
+
+Cálculo da média de valores e quantidades das transações por tipo de meio de pagamento.
+
+Interpretação dos dados com base nos resultados estatísticos obtidos.
+
+Destaques dos resultados:
+Pix: maior número médio de transações por trimestre, indicando ampla adoção pelo público.
+
+TED: maior valor médio por transação, caracterizando operações de alto valor.
+
+Boletos: média de valores consistente, demonstrando seu uso regular em pagamentos de serviços e produtos.
+
+Cartões (crédito, débito e pré-pago): uso expressivo em volume de transações, evidenciando sua presença no consumo cotidiano.
+
+DOC e Cheques: baixos valores e quantidades médias, evidenciando desuso.
+
+Débito Direto e Convênios: representam pagamentos recorrentes, com médias relevantes tanto em valor quanto em quantidade.
+
+Tecnologias utilizadas:
+Python (Jupyter Notebook)
+SQLite
+Pandas
